@@ -1,0 +1,117 @@
+Basics of Backend:
+
+1. HTTP: Hypertext Transfer Protocol
+
+    a. HTTP is the language used for communication between client and server.
+
+        1. Client = browser / mobile app
+        2. Server = backend application
+
+    b. Workflow:
+
+        Client → HTTP Request → Server
+        Client ← HTTP Response ← Server
+
+    Example:
+
+       a. You open a website
+       b. Browser sends request
+       c. Server sends back data
+
+2. HTTP Request (What client sends):
+
+   A request contains:
+
+    1. Method (what you want to do)
+    2. URL (where to send)
+    3. Headers (extra info)
+    4. Body (data, optional)
+
+   Example request:
+
+    POST /login HTTP/1.1
+    Host: example.com
+    Content-Type: application/json
+
+    {
+       "username": "john",
+       "password": "1234"
+    }
+
+3. HTTP Response (What server sends back):
+
+    Contains:
+
+      1. Status Code
+      2. Headers
+      3. Body (data)
+
+     Example response:
+  
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+        "message": "Login successful"
+      }
+
+4. HTTP Methods:
+
+    They define the actions that are required to perform.
+
+     a. GET → Fetch data
+
+         GET /users
+
+        It gets the list of users it doesn't has any body.
+
+     b. POST → Create data
+
+         POST /users
+       
+        It creates a new user. Also it consists of a body.
+
+     c. PUT → Update data (full update):
+
+         PUT /users/1
+ 
+        It updates the user data with ID = 1.
+
+     d. DELETE → Remove data:
+
+          DELETE /users/1
+
+        It deletes the user data with ID = 1.
+
+     Method	Meaning
+     GET	 Read
+     POST	 Create
+     PUT	 Update
+     DELETE	 Delete
+     
+       This is called CRUD operations
+
+5. HTTPS Status codes:
+
+   a. 200 Series → Success:
+
+        200 OK - Everything worked
+        201 Created → New resource created
+
+   b. 400 Series → Client Errors:
+
+	400 Bad Request → Invalid input
+	401 Unauthorized → Not logged in
+	403 Forbidden → No permission
+	404 Not Found → Resource not found
+
+   c. 500 Series → Server Errors
+
+	500 Internal Server Error → Something broke in backend
+
+
+6. REST API (Representational State Transfer Application Programming Interface):
+
+   REST = a way to design APIs using HTTP properly.
+
+   API (Application Programming Interface): A set of rules and protocols that allows one software application to interact with another. 
